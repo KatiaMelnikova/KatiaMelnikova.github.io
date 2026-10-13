@@ -1,0 +1,34 @@
+{
+  "name": "katiamelnikova-github-io",
+  "version": "1.0.0",
+  "private": true,
+  "packageManager": "pnpm@10.11.0",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "check": "tsc --noEmit",
+    "verify": "node scripts/verify-export.mjs",
+    "preview": "node scripts/preview.mjs"
+  },
+  "dependencies": {
+    "@fontsource/montserrat": "^5.2.0",
+    "@radix-ui/react-tabs": "1.1.13",
+    "clsx": "2.1.1",
+    "lucide-react": "0.454.0",
+    "next": "16.2.0",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "tailwind-merge": "2.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5",
+    "tailwindcss": "3.4.19",
+    "tailwindcss-animate": "1.0.7",
+    "typescript": "^5"
+  }
+}

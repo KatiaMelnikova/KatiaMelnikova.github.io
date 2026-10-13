@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 33 20% 86%; /* #e5dcd2 - светлый бежевый */
+    --foreground: 180 25% 25%; /* #2F4F4F - dark slate gray */
+
+    --card: 33 20% 86%; /* #e5dcd2 - светлый бежевый */
+    --card-foreground: 180 25% 25%; /* #2F4F4F - dark slate gray */
+
+    --popover: 33 20% 86%; /* #e5dcd2 - светлый бежевый */
+    --popover-foreground: 180 25% 25%; /* #2F4F4F - dark slate gray */
+
+    --primary: 180 25% 25%; /* #2F4F4F - dark slate gray */
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 33 25% 90%; /* Чуть светлее основного фона */
+    --secondary-foreground: 180 25% 25%; /* #2F4F4F - dark slate gray */
+
+    --muted: 33 25% 80%; /* Приглушенный вариант основного фона */
+    --muted-foreground: 180 25% 18%; /* Slightly darker for muted text */
+
+    --accent: 33 25% 80%; /* Акцентный вариант основного фона */
+    --accent-foreground: 180 25% 25%; /* #2F4F4F - dark slate gray */
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 33 20% 75%; /* Более темный вариант основного фона для границ */
+    --input: 33 20% 75%; /* Более темный вариант основного фона для полей ввода */
+    --ring: 180 25% 25%; /* #2F4F4F - dark slate gray */
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 180 25% 80%; /* Lighter slate for dark mode */
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 180 25% 80%; /* Lighter slate for dark mode */
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 180 25% 80%; /* Lighter slate for dark mode */
+
+    --primary: 180 25% 60%; /* Lighter slate for dark mode */
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 180 25% 80%; /* Lighter slate for dark mode */
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 180 25% 60%; /* Lighter slate for dark mode */
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 180 25% 80%; /* Lighter slate for dark mode */
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 180 25% 60%; /* Lighter slate for dark mode */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-weight: 300;
+    letter-spacing: 0.01em;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-medium tracking-wide;
+    letter-spacing: 0.02em;
+    color: #2f4f4f !important; /* Ensure headings are definitely the dark slate color */
+  }
+  h1 {
+    @apply text-4xl;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  h2 {
+    @apply text-2xl;
+    font-weight: 400;
+  }
+  a {
+    color: #2f4f4f; /* Ensure links are the dark slate color */
+  }
+  a:hover {
+    color: #3d6666; /* Slightly lighter slate on hover */
+  }
+  p {
+    font-weight: 300;
+    letter-spacing: 0.01em;
+  }
+  .prose p,
+  .space-y-3 p,
+  .space-y-4 p,
+  .space-y-6 p,
+  .space-y-8 p {
+    font-weight: 300;
+    letter-spacing: 0.01em;
+  }
+}
+
+body { font-family: "Montserrat", Arial, sans-serif; }
+a:focus-visible { outline: 2px solid #2f4f4f; outline-offset: 4px; }

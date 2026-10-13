@@ -1,0 +1,9 @@
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: "export",
+  trailingSlash: true,
+  images: { unoptimized: true },
+  experimental: { workerThreads: true, cpus: 2 },
+}
+
+export default nextConfig
